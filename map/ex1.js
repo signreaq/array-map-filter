@@ -21,8 +21,15 @@ En sortie: [
 
  */
 
-function getStringsLength(strings) {
+function getStringsLength(bouf) {
+  const bouffinal = bouf.map(function (words) {
+  return words + " " + "contains" + " " + words.length + " " + "characters"
+  });return bouffinal
 }
+
+getStringsLength(["bouffinal", "hhhh", "hhhj"]);
+
+
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1

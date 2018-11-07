@@ -43,8 +43,30 @@ En sortie: [
  */
 
 function getFoodCategories(foods) {
+  const result = foods.map(function(param, index){
+  if(param.isVegetarian){
+    return param.food + " " + "is suitable for vegetarians"
+  }return param.food + " " + "is not suitable for vegetarians"
+
+  });return result
 }
 
+getFoodCategories([{
+  food: 'Bacon',
+  isVegetarian: false
+},
+{
+  food: 'Sausage',
+  isVegetarian: false
+},
+{
+  food: 'Tofu',
+  isVegetarian: true
+},
+{
+  food: 'Chick Pea',
+  isVegetarian: true
+}])
 
 
 // Ne pas modifier l'export
